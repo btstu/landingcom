@@ -5,130 +5,151 @@ import { Button } from "@/components/ui/button";
 
 export default function ContactForm() {
   return (
-    <div className="mt-32 mb-16 relative pt-8">
-      {/* Grid pattern background */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
-        <svg
-          className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-200 [mask-image:radial-gradient(top,white,transparent)]"
-          aria-hidden="true"
-        >
-          <defs>
-            <pattern
-              id="contact-grid"
-              width="40"
-              height="40"
-              patternUnits="userSpaceOnUse"
-              x="50%"
-              y="100%"
-            >
-              <path d="M.5 40V.5H40" fill="none" />
-            </pattern>
-          </defs>
-          <rect
-            width="100%"
-            height="100%"
-            strokeWidth="0"
-            fill="url(#contact-grid)"
-            opacity="0.3" // Increased opacity from 0.1 to 0.3
-          />
-        </svg>
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20"></div>
+    <section className="relative overflow-hidden bg-gradient-to-b from-section to-card py-12 sm:py-16 lg:py-20">
+      {/* Grid background */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="h-full w-full bg-[linear-gradient(to_right,transparent_0%,transparent_40%,#f8fafc_40%,#f8fafc_60%,transparent_60%,transparent_100%)]"></div>
+        <div className="h-full w-full bg-[linear-gradient(to_bottom,transparent_0%,transparent_40%,#f8fafc_40%,#f8fafc_60%,transparent_60%,transparent_100%)]"></div>
+        
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#f8fafc_1px,transparent_1px)] bg-[size:24px_100%]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,#f8fafc_1px,transparent_1px)] bg-[size:100%_24px]"></div>
       </div>
       
-      <div className="max-w-3xl mx-auto relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Prêt à Elever Votre Communication?
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-md text-center sm:max-w-xl">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Prêt à révolutionner votre communication interne ?
           </h2>
-          <p className="text-xl text-muted-foreground">
-            Laissez-nous vos coordonnées et nous vous contacterons pour discuter de vos besoins spécifiques.
+          <p className="mt-4 text-lg text-muted-foreground">
+            Remplissez le formulaire ci-dessous et un de nos experts vous contactera pour discuter de vos besoins spécifiques.
           </p>
         </div>
         
-        <div className="bg-card shadow-lg rounded-2xl p-8 border border-border relative overflow-hidden">
-          {/* Decorative glow element */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-xl -mr-10 -mt-10"></div>
-          <div className="absolute bottom-0 left-0 w-32 h-32 bg-blue-500/10 rounded-full blur-xl -ml-10 -mb-10"></div>
-          
-          <form className="relative z-10 space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label htmlFor="name" className="block text-sm font-medium text-foreground">
-                  Nom Complet <span className="text-red-500">*</span>
+        <div className="mx-auto mt-10 max-w-md rounded-3xl bg-card p-8 shadow-xl ring-1 ring-gray-200 sm:max-w-lg sm:p-10">
+          <form action="#" method="POST" className="space-y-6">
+            {/* Name fields */}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <div>
+                <label htmlFor="first_name" className="block text-sm font-medium text-muted-foreground">
+                  Prénom
                 </label>
-                <input
-                  type="text"
-                  id="name"
-                  className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
-                  placeholder="Jean Dupont"
-                  required
-                />
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="first_name"
+                    id="first_name"
+                    autoComplete="given-name"
+                    placeholder="Jean"
+                    className="block w-full rounded-xl border-gray-300 bg-white/5 py-3 text-foreground shadow-sm focus:border-primary focus:ring-primary"
+                  />
+                </div>
               </div>
-              
-              <div className="space-y-2">
-                <label htmlFor="email" className="block text-sm font-medium text-foreground">
-                  Email <span className="text-red-500">*</span>
+              <div>
+                <label htmlFor="last_name" className="block text-sm font-medium text-muted-foreground">
+                  Nom
                 </label>
+                <div className="mt-1">
+                  <input
+                    type="text"
+                    name="last_name"
+                    id="last_name"
+                    autoComplete="family-name"
+                    placeholder="Dupont"
+                    className="block w-full rounded-xl border-gray-300 bg-white/5 py-3 text-foreground shadow-sm focus:border-primary focus:ring-primary"
+                  />
+                </div>
+              </div>
+            </div>
+            
+            {/* Email and phone */}
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-muted-foreground">
+                Email
+              </label>
+              <div className="mt-1">
                 <input
                   type="email"
+                  name="email"
                   id="email"
-                  className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
-                  placeholder="jean.dupont@entreprise.com"
-                  required
+                  autoComplete="email"
+                  placeholder="vous@exemple.com"
+                  className="block w-full rounded-xl border-gray-300 bg-white/5 py-3 text-foreground shadow-sm focus:border-primary focus:ring-primary"
+                />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="phone" className="block text-sm font-medium text-muted-foreground">
+                Téléphone
+              </label>
+              <div className="mt-1">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  autoComplete="tel"
+                  placeholder="+33 XXXXXXXXX"
+                  className="block w-full rounded-xl border-gray-300 bg-white/5 py-3 text-foreground shadow-sm focus:border-primary focus:ring-primary"
                 />
               </div>
             </div>
             
-            <div className="space-y-2">
-              <label htmlFor="company" className="block text-sm font-medium text-foreground">
+            {/* Company name */}
+            <div>
+              <label htmlFor="company" className="block text-sm font-medium text-muted-foreground">
                 Entreprise
               </label>
-              <input
-                type="text"
-                id="company"
-                className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
-                placeholder="Nom de votre entreprise"
-              />
+              <div className="mt-1">
+                <input
+                  type="text"
+                  name="company"
+                  id="company"
+                  autoComplete="organization"
+                  placeholder="Nom de votre entreprise"
+                  className="block w-full rounded-xl border-gray-300 bg-white/5 py-3 text-foreground shadow-sm focus:border-primary focus:ring-primary"
+                />
+              </div>
             </div>
             
-            <div className="space-y-2">
-              <label htmlFor="message" className="block text-sm font-medium text-foreground">
-                Message <span className="text-red-500">*</span>
+            {/* Message textarea */}
+            <div>
+              <label htmlFor="message" className="block text-sm font-medium text-muted-foreground">
+                Message
               </label>
-              <textarea
-                id="message"
-                rows={4}
-                className="w-full px-4 py-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
-                placeholder="Parlez-nous de vos besoins en communication..."
-                required
-              ></textarea>
+              <div className="mt-1">
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  placeholder="Décrivez vos besoins en communication..."
+                  className="block w-full rounded-xl border-gray-300 bg-white/5 py-3 text-foreground shadow-sm focus:border-primary focus:ring-primary"
+                ></textarea>
+              </div>
             </div>
             
-            <div className="flex items-center">
-              <input 
-                id="consent" 
-                type="checkbox" 
-                className="h-4 w-4 text-blue-500 focus:ring-blue-500 border-border rounded"
-                required 
-              />
-              <label htmlFor="consent" className="ml-2 block text-sm text-muted-foreground">
-                J'accepte que Bettrcom me contacte au sujet de mes besoins en communication.
-              </label>
+            {/* Privacy checkbox */}
+            <div className="flex items-start">
+              <div className="flex h-5 items-center">
+                <input
+                  id="privacy"
+                  name="privacy"
+                  type="checkbox"
+                  className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
+                />
+              </div>
+              <div className="ml-3">
+                <label htmlFor="privacy" className="text-sm text-muted-foreground">
+                  J&apos;accepte que Bettrcom me contacte au sujet de mes besoins en communication.
+                </label>
+              </div>
             </div>
             
-            <div className="pt-2">
-              <Button className="w-full py-6 text-base font-medium transform transition-transform duration-200 hover:scale-105">
-                Envoyer Ma Demande
-              </Button>
-            </div>
-            
-            <p className="text-xs text-muted-foreground text-center mt-4">
-              Vos données personnelles sont protégées conformément à notre politique de confidentialité.
-            </p>
+            {/* Submit button */}
+            <Button className="w-full py-6 text-base font-medium transform transition-transform duration-200 hover:scale-105">
+              Envoyer ma demande
+            </Button>
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 } 

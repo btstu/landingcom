@@ -86,10 +86,10 @@ export default function PricingSection() {
                 Perfect pour les petites équipes et les startups.
               </p>
               <ul className="space-y-3 flex-1">
-                <FeatureItem included={true}>Messagerie d'équipe illimitée</FeatureItem>
-                <FeatureItem included={true}>Jusqu'à 5 canaux de communication</FeatureItem>
+                <FeatureItem included={true}>Messagerie d&apos;équipe illimitée</FeatureItem>
+                <FeatureItem included={true}>Jusqu&apos;à 5 canaux de communication</FeatureItem>
                 <FeatureItem included={true}>Stockage de 10 Go par utilisateur</FeatureItem>
-                <FeatureItem included={true}>Intégrations basiques (jusqu'à 5)</FeatureItem>
+                <FeatureItem included={true}>Intégrations basiques (jusqu&apos;à 5)</FeatureItem>
                 <FeatureItem included={true}>Support par email</FeatureItem>
                 <FeatureItem included={false}>Communication unifiée multicanale</FeatureItem>
                 <FeatureItem included={false}>Analytiques avancées</FeatureItem>
@@ -97,7 +97,7 @@ export default function PricingSection() {
                 <FeatureItem included={false}>Support 24/7</FeatureItem>
               </ul>
               <Button className="mt-8 w-full text-blue-500" variant="outline">
-                Commencer l'essai gratuit
+                Commencer l&apos;essai gratuit
               </Button>
             </div>
           </Card>
@@ -124,10 +124,10 @@ export default function PricingSection() {
                 Idéal pour les entreprises en croissance avec des besoins de communication avancés.
               </p>
               <ul className="space-y-3 flex-1">
-                <FeatureItem included={true}>Messagerie d'équipe illimitée</FeatureItem>
+                <FeatureItem included={true}>Messagerie d&apos;équipe illimitée</FeatureItem>
                 <FeatureItem included={true}>Canaux de communication illimités</FeatureItem>
                 <FeatureItem included={true}>Stockage de 50 Go par utilisateur</FeatureItem>
-                <FeatureItem included={true}>Intégrations avancées (jusqu'à 20)</FeatureItem>
+                <FeatureItem included={true}>Intégrations avancées (jusqu&apos;à 20)</FeatureItem>
                 <FeatureItem included={true}>Communication unifiée multicanale</FeatureItem>
                 <FeatureItem included={true}>Analytiques avancées</FeatureItem>
                 <FeatureItem included={true}>Personnalisation de marque</FeatureItem>
@@ -135,7 +135,7 @@ export default function PricingSection() {
                 <FeatureItem included={false}>API et développement personnalisé</FeatureItem>
               </ul>
               <Button className="mt-8 w-full" variant="default">
-                Commencer l'essai gratuit
+                Commencer l&apos;essai gratuit
               </Button>
             </div>
           </Card>
@@ -189,10 +189,10 @@ export default function PricingSection() {
             </div>
             <div className="border-b border-border pb-6">
               <h4 className="text-base font-medium text-foreground mb-2">
-                Comment fonctionne l'essai gratuit ?
+                Comment fonctionne l&apos;essai gratuit ?
               </h4>
               <p className="text-sm text-muted-foreground">
-                Notre essai gratuit vous donne accès à toutes les fonctionnalités du forfait Business pendant 14 jours, sans engagement. Aucune carte de crédit n'est requise pour commencer.
+                Notre essai gratuit vous donne accès à toutes les fonctionnalités du forfait Business pendant 14 jours, sans engagement. Aucune carte de crédit n&apos;est requise pour commencer.
               </p>
             </div>
             <div className="border-b border-border pb-6">

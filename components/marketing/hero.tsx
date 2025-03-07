@@ -1,6 +1,7 @@
 'use client'
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import Image from 'next/image';
 
 interface HeroProps {
   scrollToPricing: () => void;
@@ -66,12 +67,15 @@ export default function Hero({ scrollToPricing }: HeroProps) {
               { name: "Vensy", src: "https://feather.so/images/landing/avatars/vensy.png" },
               { name: "Tom", src: "https://feather.so/images/landing/avatars/tom.png", primary: true }
             ].map((avatar, index) => (
-              <img 
-                key={index}
-                alt={avatar.name} 
-                src={avatar.src} 
-                className={`inline-block h-10 w-10 rounded-full ring-2 ${avatar.primary ? 'ring-primary/20' : 'ring-gray-100'}`}
-              />
+              <div key={index} className={`inline-block h-10 w-10 rounded-full ring-2 ${avatar.primary ? 'ring-primary/20' : 'ring-gray-100'} overflow-hidden`}>
+                <Image 
+                  alt={avatar.name} 
+                  src={avatar.src} 
+                  width={40}
+                  height={40}
+                  className="h-full w-full object-cover"
+                />
+              </div>
             ))}
           </div>
           
@@ -79,16 +83,20 @@ export default function Hero({ scrollToPricing }: HeroProps) {
             <span className="block">
               Rejoignez <span className="font-semibold">25+ companie et Start-ups</span>
             </span>
-            <span className="block">et optimiser la communication interne de votre entreprise des aujourd'hui</span>
+            <span className="block">et optimiser la communication interne de votre entreprise des aujourd&apos;hui</span>
           </p>
         </div>
         
         <div className="mx-auto mt-6 max-w-5xl lg:mt-8">
-          <img 
-            alt="Hero mockup" 
-            src="https://i.ibb.co/DfVR10jS/heroimg.png" 
-            className="w-full object-cover"
-          />
+          <div className="relative w-full aspect-video">
+            <Image
+              alt="Hero mockup" 
+              src="https://i.ibb.co/DfVR10jS/heroimg.png"
+              fill
+              priority
+              className="object-cover"
+            />
+          </div>
         </div>
         
         <div className="mt-8 text-center">
@@ -96,22 +104,32 @@ export default function Hero({ scrollToPricing }: HeroProps) {
           
           <div className="mt-5 flex flex-wrap items-center justify-center gap-x-12 gap-y-6 lg:mt-10 lg:gap-x-16 lg:gap-y-8">
             {/* Company logos */}
-            <img alt="Tweet Hunter" src="https://feather.so/images/landing/logos/tweet-hunter.svg" className="h-6 w-auto object-contain lg:h-8" />
-            <img alt="Testimonial" src="https://feather.so/images/landing/logos/testimonial.svg" className="h-8 w-auto object-contain lg:h-10" />
-            <img alt="Xumm" src="https://feather.so/images/landing/logos/xumm.svg" className="h-6 w-auto object-contain" />
-            <img alt="Green Got" src="https://feather.so/images/landing/logos/green-got.png" className="h-8 w-auto object-contain lg:h-10" />
-            <img alt="GrowthX" src="https://feather.so/images/landing/logos/growthx.png" className="h-6 w-auto object-contain lg:h-7" />
+            <div className="h-6 w-auto relative lg:h-8">
+              <Image alt="Tweet Hunter" src="https://feather.so/images/landing/logos/tweet-hunter.svg" width={100} height={32} className="object-contain" />
+            </div>
+            <div className="h-8 w-auto relative lg:h-10">
+              <Image alt="Testimonial" src="https://feather.so/images/landing/logos/testimonial.svg" width={120} height={40} className="object-contain" />
+            </div>
+            <div className="h-6 w-auto relative">
+              <Image alt="Xumm" src="https://feather.so/images/landing/logos/xumm.svg" width={100} height={24} className="object-contain" />
+            </div>
+            <div className="h-8 w-auto relative lg:h-10">
+              <Image alt="Green Got" src="https://feather.so/images/landing/logos/green-got.png" width={120} height={40} className="object-contain" />
+            </div>
+            <div className="h-6 w-auto relative lg:h-7">
+              <Image alt="GrowthX" src="https://feather.so/images/landing/logos/growthx.png" width={100} height={28} className="object-contain" />
+            </div>
             
             <div className="flex items-center space-x-2">
-              <div className="h-7 w-7">
-                <img alt="Reflect" src="https://feather.so/images/landing/logos/reflect.png" className="h-full w-full object-cover" />
+              <div className="h-7 w-7 relative">
+                <Image alt="Reflect" src="https://feather.so/images/landing/logos/reflect.png" width={28} height={28} className="object-cover" />
               </div>
               <span className="cursor-default text-2xl font-semibold tracking-wide">Reflect</span>
             </div>
             
             <div className="flex items-center space-x-2">
-              <div className="h-7 w-7">
-                <img alt="SwipeWell" src="https://feather.so/images/landing/logos/swipewell.png" className="h-full w-full object-cover" />
+              <div className="h-7 w-7 relative">
+                <Image alt="SwipeWell" src="https://feather.so/images/landing/logos/swipewell.png" width={28} height={28} className="object-cover" />
               </div>
               <div className="cursor-default text-2xl font-semibold tracking-wide">
                 <span>Swipe</span>
@@ -119,22 +137,30 @@ export default function Hero({ scrollToPricing }: HeroProps) {
               </div>
             </div>
             
-            <img alt="Beyonk" src="https://feather.so/images/landing/logos/beyonk.svg" className="h-4 w-auto object-contain lg:h-5" />
-            <img alt="Taplio" src="https://feather.so/images/landing/logos/taplio.svg" className="h-6 w-auto object-contain lg:h-8" />
+            <div className="h-4 w-auto relative lg:h-5">
+              <Image alt="Beyonk" src="https://feather.so/images/landing/logos/beyonk.svg" width={80} height={20} className="object-contain" />
+            </div>
+            <div className="h-6 w-auto relative lg:h-8">
+              <Image alt="Taplio" src="https://feather.so/images/landing/logos/taplio.svg" width={100} height={32} className="object-contain" />
+            </div>
             
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8">
-                <img alt="Dash MY" src="https://feather.so/images/landing/logos/dash.png" className="h-full w-full object-cover" />
+              <div className="h-8 w-8 relative">
+                <Image alt="Dash MY" src="https://feather.so/images/landing/logos/dash.png" width={32} height={32} className="object-cover" />
               </div>
               <span className="cursor-default text-2xl font-semibold">Dash MY</span>
             </div>
             
-            <img alt="Lal10" src="https://feather.so/images/landing/logos/lal10.png" className="h-12 w-auto object-contain" />
-            <img alt="Indie Worldwide" src="https://feather.so/images/landing/logos/indie-worldwide.png" className="h-6 w-auto object-contain lg:h-10" />
+            <div className="h-12 w-auto relative">
+              <Image alt="Lal10" src="https://feather.so/images/landing/logos/lal10.png" width={120} height={48} className="object-contain" />
+            </div>
+            <div className="h-6 w-auto relative lg:h-10">
+              <Image alt="Indie Worldwide" src="https://feather.so/images/landing/logos/indie-worldwide.png" width={120} height={40} className="object-contain" />
+            </div>
             
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8">
-                <img alt="BotGhost" src="https://feather.so/images/landing/logos/botghost.png" className="h-full w-full object-cover" />
+              <div className="h-8 w-8 relative">
+                <Image alt="BotGhost" src="https://feather.so/images/landing/logos/botghost.png" width={32} height={32} className="object-cover" />
               </div>
               <span className="cursor-default text-2xl font-semibold tracking-tighter">BotGhost</span>
             </div>

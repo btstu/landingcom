@@ -10,7 +10,7 @@ export default function Section1() {
         <div className="text-center">
           <p className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Nos Solutions vous permettent de</p>
           <h2 className="mt-6 text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">Communiquer en toute securite</h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg font-normal text-muted-foreground lg:text-xl lg:leading-8">dans votre companie - c'est simple et rapide a mettre en place.</p>
+          <p className="mx-auto mt-4 max-w-xl text-lg font-normal text-muted-foreground lg:text-xl lg:leading-8">dans votre companie - c&apos;est simple et rapide a mettre en place.</p>
         </div>
         
         <div className="mx-auto my-4 h-px max-w-6xl bg-gradient-to-r from-transparent via-border to-transparent sm:mt-16 lg:mt-20 xl:mt-20"></div>
@@ -26,7 +26,7 @@ export default function Section1() {
                 {/* Card 1: Messagerie encryptée */}
                 <div className="w-full space-y-4 p-5">
                   <div className="flex h-full flex-col space-y-2 divide-y divide-border">
-                    <h3 className="text-lg font-semibold text-foreground sm:text-xl">Messagerie encryptée a l'interne</h3>
+                    <h3 className="text-lg font-semibold text-foreground sm:text-xl">Messagerie encryptée a l&apos;interne</h3>
                     <div className="flex h-full flex-col">
                       <h4 className="mt-2 text-base font-normal text-muted-foreground">Communication sécurisée entre les membres de vos équipes. Chiffré de bout en bout pour une confidentialité totale.</h4>
                       <div className="flex h-full flex-col justify-between">
@@ -106,7 +106,7 @@ export default function Section1() {
                   <div className="flex h-full flex-col space-y-2 divide-y divide-border">
                     <h3 className="text-lg font-semibold text-foreground sm:text-xl">Gestion des équipes</h3>
                     <div className="flex h-full flex-col">
-                      <h4 className="mt-2 text-base font-normal text-muted-foreground">Organisez votre structure d'entreprise avec des groupes, des rôles et des permissions personnalisés pour chaque membre.</h4>
+                      <h4 className="mt-2 text-base font-normal text-muted-foreground">Organisez votre structure d&apos;entreprise avec des groupes, des rôles et des permissions personnalisés pour chaque membre.</h4>
                       <div className="flex h-full flex-col justify-between">
                         <ul className="my-6 space-y-3 text-base font-normal text-muted-foreground">
                           {[
@@ -114,7 +114,7 @@ export default function Section1() {
                             "Permissions granulaires",
                             "Groupes et départements",
                             "Intégration LDAP/SSO",
-                            "Rapports d'activité"
+                            "Rapports d&apos;activité"
                           ].map((feature, index) => (
                             <li key={index} className="flex items-center gap-3">
                               <Image 

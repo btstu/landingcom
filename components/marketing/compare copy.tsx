@@ -33,7 +33,7 @@ export default function Compare() {
         <div className="container mx-auto px-4 md:px-8 lg:px-16 max-w-7xl">
           <div className="text-center mb-24">
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              Votre Communication d'Entreprise Transformée
+              Votre Communication d&apos;Entreprise Transformée
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Découvrez comment Bettrcom révolutionne la communication interne et externe de votre entreprise.
@@ -81,7 +81,7 @@ export default function Compare() {
                     🤝Votre Communication est Unifiée
                   </h3>
                   <p className="text-lg text-muted-foreground mb-8">
-                    Profitez d'une plateforme sécurisée et centralisée où votre communication devient fluide, votre collaboration efficace et votre entreprise plus performante. 
+                    Profitez d&apos;une plateforme sécurisée et centralisée où votre communication devient fluide, votre collaboration efficace et votre entreprise plus performante. 
                     <strong className="text-foreground"> Avec Bettrcom, vous transformez votre communication.</strong>
                   </p>
                   <Button variant="default" className="mx-auto">
