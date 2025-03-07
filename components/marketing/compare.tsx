@@ -2,12 +2,9 @@
 
 import React from 'react'
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
-import { CheckCircle2, XCircle } from "lucide-react"
-import { motion } from 'framer-motion'
-import { cn } from '@/lib/utils'
 import { useRef } from 'react'
 import { useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export default function Compare() {
   const containerRef = useRef<HTMLDivElement>(null);

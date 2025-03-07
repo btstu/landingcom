@@ -12,29 +12,18 @@ import PricingSection from "@/components/marketing/pricing";
 
 export default function Home() {
   // Create refs for all sections
-  const heroRef = useRef<HTMLDivElement>(null);
-  const section1Ref = useRef<HTMLDivElement>(null);
   const pricingRef = useRef<HTMLDivElement>(null);
-  const compareRef = useRef<HTMLDivElement>(null);
-  const contactRef = useRef<HTMLDivElement>(null);
   const showcaseRef = useRef<HTMLDivElement>(null);
 
-  // Scroll functions for each section
-  const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
-    if (ref && ref.current) {
-      ref.current.scrollIntoView({ 
+  // Scroll function for pricing section
+  const scrollToPricing = () => {
+    if (pricingRef.current) {
+      pricingRef.current.scrollIntoView({ 
         behavior: 'smooth',
         block: 'start'
       });
     }
   };
-
-  const scrollToHero = () => scrollToSection(heroRef);
-  const scrollToSection1 = () => scrollToSection(section1Ref);
-  const scrollToPricing = () => scrollToSection(pricingRef);
-  const scrollToCompare = () => scrollToSection(compareRef);
-  const scrollToContact = () => scrollToSection(contactRef);
-  const scrollToShowcase = () => scrollToSection(showcaseRef);
 
   useScrollAnimation();
 
@@ -44,12 +33,12 @@ export default function Home() {
       <Header />
       
       {/* Hero section with animation */}
-      <div ref={heroRef} id="hero" className="stagger-children animate-fade-in-up">
+      <div id="hero" className="stagger-children animate-fade-in-up">
         <Hero scrollToPricing={scrollToPricing} />
       </div>
       
       {/* Section 1 with animation */}
-      <div ref={section1Ref} id="features" className="stagger-children">
+      <div id="features" className="stagger-children">
         <Section1 />
       </div>
 
@@ -59,7 +48,7 @@ export default function Home() {
       </div>
 
       {/* Compare section with dynamic scroll animation */}
-      <div ref={compareRef} id="compare" className="stagger-children">
+      <div id="compare" className="stagger-children">
         <Compare />
       </div>
 
@@ -69,7 +58,7 @@ export default function Home() {
       </div>
 
       {/* Contact form */}
-      <div ref={contactRef} id="contact" className="stagger-children animate-fade-in-up">
+      <div id="contact" className="stagger-children animate-fade-in-up">
         <ContactForm />
       </div>
 

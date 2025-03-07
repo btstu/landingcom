@@ -1,5 +1,7 @@
 'use client'    
 import React from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   // Function to handle smooth scroll to elements with matching ID
@@ -53,13 +55,15 @@ export default function Header() {
             
             {/* Logo */}
             <div className="relative z-10 shrink-0">
-              <a href="/" title="Bettrcom" className="flex">
-                <img 
+              <Link href="/" title="Bettrcom" className="flex">
+                <Image 
                   alt="Bettrcom Logo" 
                   src="/bettrcomLogo.svg" 
                   className="block h-8 w-auto"
+                  width={120}
+                  height={32}
                 />
-              </a>
+              </Link>
             </div>  
             
             {/* Desktop navigation */}
@@ -99,15 +103,15 @@ export default function Header() {
                 Showcase
               </a>
               
-              <a href="" className="inline-flex items-center rounded-lg border border-transparent px-2 py-1 text-base transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-1 focus:ring-gray-300 font-medium text-gray-700">Blog</a>
-              <a href="" className="inline-flex items-center rounded-lg border border-transparent px-2 py-1 text-base transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-1 focus:ring-gray-300 font-medium text-gray-700">Help Docs</a>
-              <a href="" className="inline-flex items-center rounded-lg border border-transparent px-2 py-1 text-base transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-1 focus:ring-gray-300 font-medium text-gray-700">Changelog</a>
+              <a href="#" className="inline-flex items-center rounded-lg border border-transparent px-2 py-1 text-base transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-1 focus:ring-gray-300 font-medium text-gray-700">Blog</a>
+              <a href="#" className="inline-flex items-center rounded-lg border border-transparent px-2 py-1 text-base transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-1 focus:ring-gray-300 font-medium text-gray-700">Help Docs</a>
+              <a href="#" className="inline-flex items-center rounded-lg border border-transparent px-2 py-1 text-base transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-1 focus:ring-gray-300 font-medium text-gray-700">Changelog</a>
             </div>
             
             {/* CTA buttons */}
             <div className="relative z-10 flex items-center gap-x-3">
               <div className="hidden sm:block">
-                <a href="/login" className="inline-flex h-10 items-center justify-center rounded-xl border border-gray-300 px-4 py-2 text-base font-semibold text-gray-900 transition-all duration-200 hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2">Login</a>
+                <Link href="/login" className="inline-flex h-10 items-center justify-center rounded-xl border border-gray-300 px-4 py-2 text-base font-semibold text-gray-900 transition-all duration-200 hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2">Login</Link>
               </div>
               <a 
                 href="#pricing" 
